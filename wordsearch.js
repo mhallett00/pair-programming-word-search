@@ -1,12 +1,11 @@
+
 const wordSearch = (letters, word) => {
   if (letters.length) {
     const horizontalJoin = letters.map(ls => ls.join(''));
     const verticalJoin = transpose(letters).map(ls => ls.join(''));
-    console.log(horizontalJoin, verticalJoin);
     const orientation = [horizontalJoin, verticalJoin];
     for (const each of orientation) {
       for (const l of each) {
-        console.log(l);
         if (l.includes(word)) {
           return true;
         }
